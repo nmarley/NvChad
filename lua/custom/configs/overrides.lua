@@ -5,6 +5,9 @@ M.copilot = {
   -- https://github.com/zbirenbaum/copilot.lua?tab=readme-ov-file#setup-and-configuration
   suggestion = {
     auto_trigger = true,
+    keymap = {
+      accept = "<Tab>",  -- Replace <key combination> with your preferred keys
+    },
   }
 }
 
