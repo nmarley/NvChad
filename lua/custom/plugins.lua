@@ -7,6 +7,7 @@ local plugins = {
       ensure_installed = {
         "gopls",
         "rust-analyzer",
+        "typescript-language-server",
       }
     }
   },
