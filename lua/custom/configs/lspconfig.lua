@@ -1,9 +1,12 @@
-local on_attach = require("plugins.configs.lspconfig").on_attach
-local capabilities = require("plugins.configs.lspconfig").capabilities
+local config = require("plugins.configs.lspconfig")
+local on_attach = config.on_attach
+local capabilities = config.capabilities
 
 local lspconfig = require("lspconfig")
 local util = require "lspconfig/util"
+-- local utils = require "core.utils"
 
+-- 2024-01-31(nmarley): Go LSP config (added this at some point in the past 3 months)
 lspconfig.gopls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -22,3 +25,15 @@ lspconfig.gopls.setup {
     }
   }
 }
+
+-- 2024-01-31(nmarley): Add typescript LSP config
+-- lspconfig.typescript.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--
+--   init_options = {
+--     preferences = {
+--       disableSuggestions = true,
+--     }
+--   }
+-- }
