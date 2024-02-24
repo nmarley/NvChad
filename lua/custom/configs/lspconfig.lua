@@ -44,13 +44,13 @@ lspconfig.gopls.setup {
 }
 
 -- 2024-01-31(nmarley): Add typescript LSP config
--- lspconfig.typescript.setup {
---   on_attach = on_attach,
---   capabilities = capabilities,
---
---   init_options = {
---     preferences = {
---       disableSuggestions = true,
---     }
---   }
--- }
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
+    }
+  }
+}
