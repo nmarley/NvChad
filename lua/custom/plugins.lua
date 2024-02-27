@@ -40,5 +40,8 @@ local plugins = {
       vim.g.rustfmt_autosave = 1
     end,
   },
+
+  -- 2024-02-27(nmarley): TODO: Add rustaceanvim plugin
+  -- https://github.com/mrcjkb/rustaceanvim
 }
 return plugins
