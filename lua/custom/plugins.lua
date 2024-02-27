@@ -31,5 +31,14 @@ local plugins = {
     -- lazy = false
     opts = overrides.copilot,
   },
+
+  -- 2024-02-27(nmarley): Add rust.vim plugin to autoformat code upon save
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function()
+      vim.g.rustfmt_autosave = 1
+    end,
+  },
 }
 return plugins
