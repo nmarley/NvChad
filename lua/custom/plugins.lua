@@ -43,5 +43,14 @@ local plugins = {
 
   -- 2024-02-27(nmarley): TODO: Add rustaceanvim plugin
   -- https://github.com/mrcjkb/rustaceanvim
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^4",
+    ft = "rust",
+    dependencies = "neovim/nvim-lspconfig",
+    config = function()
+        require "custom.configs.rustaceanvim"
+    end
+  },
 }
 return plugins
