@@ -42,15 +42,16 @@ local plugins = {
   },
 
   -- 2024-02-27(nmarley): Add Rustaceanvim plugin for Rust lsp and other dev tools
-  {
-    "mrcjkb/rustaceanvim",
-    version = "^4",
-    ft = "rust",
-    dependencies = "neovim/nvim-lspconfig",
-    config = function()
-        require "custom.configs.rustaceanvim"
-    end
-  },
+  -- 2024-02-28(nmarley): Commented for now b/c it doesn't work w/copilot
+  -- {
+  --   "mrcjkb/rustaceanvim",
+  --   version = "^4",
+  --   ft = "rust",
+  --   dependencies = "neovim/nvim-lspconfig",
+  --   config = function()
+  --       require "custom.configs.rustaceanvim"
+  --   end
+  -- },
 
   -- 2024-02-27(nmarley): TODO: Add crates plugin for Rust
   -- https://github.com/Saecki/crates.nvim?tab=readme-ov-file
