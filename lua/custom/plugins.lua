@@ -41,8 +41,7 @@ local plugins = {
     end,
   },
 
-  -- 2024-02-27(nmarley): TODO: Add rustaceanvim plugin
-  -- https://github.com/mrcjkb/rustaceanvim
+  -- 2024-02-27(nmarley): Add Rustaceanvim plugin for Rust lsp and other dev tools
   {
     "mrcjkb/rustaceanvim",
     version = "^4",
@@ -52,5 +51,8 @@ local plugins = {
         require "custom.configs.rustaceanvim"
     end
   },
+
+  -- 2024-02-27(nmarley): TODO: Add crates plugin for Rust
+  -- https://github.com/Saecki/crates.nvim?tab=readme-ov-file
 }
 return plugins
