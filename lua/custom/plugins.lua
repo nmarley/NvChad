@@ -38,6 +38,9 @@ local plugins = {
     ft = "rust",
     init = function()
       vim.g.rustfmt_autosave = 1
+      -- setting rust_recommended_style to 0 disables the crappy defaults,
+      -- which sets textwidth to 99 instead of 80
+      vim.g.rust_recommended_style = 0
     end,
   },
 }
