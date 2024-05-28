@@ -8,7 +8,10 @@ M.copilot = {
     keymap = {
       accept = "<Tab>",  -- Replace <key combination> with your preferred keys
     },
-  }
+  },
+  filetypes = {
+    markdown = true,
+  },
 }
 
 return M
