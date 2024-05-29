@@ -54,3 +54,13 @@ lspconfig.tsserver.setup {
     }
   }
 }
+
+-- 2024-05-29(nmarley): Add C++/clangd LSP config via DreamsOfCode tutorial
+-- https://www.youtube.com/watch?v=lsFoZIg-oDs
+lspconfig.clangd.setup {
+  on_attach = function(client, bufnr)
+    client.server_capabilities.signatureHelpProvider = false
+    on_attach(client, bufnr)
+  end,
+  capabilities = capabilities,
+}
