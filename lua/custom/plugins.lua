@@ -6,6 +6,7 @@ local plugins = {
     opts = {
       ensure_installed = {
         "clangd",
+        "clang-format",
         "gopls",
         "rust-analyzer",
         "typescript-language-server",
