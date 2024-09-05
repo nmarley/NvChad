@@ -45,5 +45,26 @@ local plugins = {
       vim.g.rust_recommended_style = 0
     end,
   },
+
+  -- 2024-08-25(nmarley): Add avante.nvim plugin to provide AI-driven code suggestions
+  -- This is really shit right now, need a better plugin that doesn't need extra
+  -- windows, just make suggestions like the Copilot plugin does, but using my
+  -- own Claude API key. God what fucking horse shit.
+  -- {
+  --   "yetone/avante.nvim",
+  --   event = "VeryLazy",
+  --   lazy = false,
+  --   -- Set this if you always want to pull the latest change
+  --   -- version = false,
+  --   build  = "make",
+  --   -- Add any opts here
+  --   -- opts = { },
+  --   dependencies = {
+  --       "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+  --       "stevearc/dressing.nvim",
+  --       "nvim-lua/plenary.nvim",
+  --       "MunifTanjim/nui.nvim",
+  --   },
+  -- },
 }
 return plugins
