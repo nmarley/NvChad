@@ -44,7 +44,8 @@ lspconfig.gopls.setup {
 }
 
 -- 2024-01-31(nmarley): Add typescript LSP config
-lspconfig.tsserver.setup {
+-- lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 
