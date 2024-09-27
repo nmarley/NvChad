@@ -27,8 +27,14 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.mouse = "a"
 
+-- nmarley, 2024-09-27: This is nvim line numbers setup. I am setting
+-- relativenumbers to true to get hybrid numbers
+-- This is probably where a lot of NVchad presets are set so I can start
+-- turning them off here if I don't like so many customizations.
+
 -- Numbers
 opt.number = true
+opt.relativenumber = true
 opt.numberwidth = 2
 opt.ruler = false
 
