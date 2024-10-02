@@ -2,6 +2,14 @@ local overrides = require("custom.configs.overrides")
 
 local plugins = {
   {
+        "nvimtools/none-ls.nvim",
+        event = "VeryLazy",
+        opts = function()
+            return require "custom.configs.null-ls"
+        end,
+        config = function(_, opts) require("null-ls").setup(opts) end,
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -10,6 +18,7 @@ local plugins = {
         "gopls",
         "rust-analyzer",
         "typescript-language-server",
+        "biome",
       }
     }
   },
