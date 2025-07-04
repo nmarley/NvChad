@@ -5,12 +5,12 @@ local opts = {
     sources = {
         -- null_ls.builtins.formatting.biome,
         -- Run biome w/these extra args only if the biome.json file is not found
-        null_ls.builtins.formatting.biome.with({
-            condition = function(utils)
-                return not utils.root_has_file("biome.json") and not utils.has_file("biome.json")
-            end,
-            extra_args = { "--indent-width=2", "--indent-style=space" },
-        }),
+        -- null_ls.builtins.formatting.biome.with({
+        --     condition = function(utils)
+        --         return not utils.root_has_file("biome.json") and not utils.has_file("biome.json")
+        --     end,
+        --     extra_args = { "--indent-width=2", "--indent-style=space" },
+        -- }),
         -- ... otherwise run biome w/config rules defined in biome.json
         null_ls.builtins.formatting.biome.with({
             condition = function(utils)
