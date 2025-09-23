@@ -42,8 +42,9 @@ M.capabilities.textDocument.completion.completionItem = {
 }
 
 
--- - Change `require'lspconfig'[…]` to `vim.lsp.config(…)`.
-require("lspconfig").lua_ls.setup {
+-- Updated to use vim.lsp.config instead of deprecated lspconfig
+vim.lsp.config("lua_ls", {
+  cmd = { "lua-language-server" },
   on_attach = M.on_attach,
   capabilities = M.capabilities,
 
@@ -64,6 +65,6 @@ require("lspconfig").lua_ls.setup {
       },
     },
   },
-}
+})
 
 return M

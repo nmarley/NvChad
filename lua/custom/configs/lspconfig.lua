@@ -2,15 +2,15 @@ local config = require("plugins.configs.lspconfig")
 local on_attach = config.on_attach
 local capabilities = config.capabilities
 
-local lspconfig = require("lspconfig")
--- - Change `require'lspconfig'[…]` to `vim.lsp.config(…)`.
--- local lspconfig = vim.lsp.config
+-- Updated to use vim.lsp.config instead of deprecated lspconfig
+-- local lspconfig = require("lspconfig")
 
 local util = require "lspconfig/util"
 
 -- 2024-02-11(nmarley): Rust LSP config via DreamsOfCode tutorial
 -- https://www.youtube.com/watch?v=mh_EJhH49Ms
-lspconfig.rust_analyzer.setup {
+vim.lsp.config("rust_analyzer", {
+  cmd = { "rust-analyzer" },
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "rust" },
@@ -23,11 +23,11 @@ lspconfig.rust_analyzer.setup {
       },
     }
   }
-}
+})
 
 
 -- 2024-01-31(nmarley): Go LSP config (added this at some point in the past 3 months)
-lspconfig.gopls.setup {
+vim.lsp.config("gopls", {
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = {"gopls"},
@@ -44,11 +44,12 @@ lspconfig.gopls.setup {
       staticcheck = true,
     }
   }
-}
+})
 
 -- 2024-01-31(nmarley): Add typescript LSP config
 -- lspconfig.tsserver.setup {
-lspconfig.ts_ls.setup {
+vim.lsp.config("ts_ls", {
+  cmd = { "typescript-language-server", "--stdio" },
   on_attach = on_attach,
   capabilities = capabilities,
 
@@ -57,14 +58,15 @@ lspconfig.ts_ls.setup {
       disableSuggestions = true,
     }
   }
-}
+})
 
 -- 2024-05-29(nmarley): Add C++/clangd LSP config via DreamsOfCode tutorial
 -- https://www.youtube.com/watch?v=lsFoZIg-oDs
-lspconfig.clangd.setup {
+vim.lsp.config("clangd", {
+  cmd = { "clangd" },
   on_attach = function(client, bufnr)
     client.server_capabilities.signatureHelpProvider = false
     on_attach(client, bufnr)
   end,
   capabilities = capabilities,
-}
+})
