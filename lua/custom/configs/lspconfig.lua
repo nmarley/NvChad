@@ -9,7 +9,7 @@ local util = require "lspconfig/util"
 
 -- 2024-02-11(nmarley): Rust LSP config via DreamsOfCode tutorial
 -- https://www.youtube.com/watch?v=mh_EJhH49Ms
-vim.lsp.config("rust_analyzer", {
+vim.lsp.config.rust_analyzer = {
   cmd = { "rust-analyzer" },
   on_attach = on_attach,
   capabilities = capabilities,
@@ -23,7 +23,7 @@ vim.lsp.config("rust_analyzer", {
       },
     }
   }
-})
+}
 
 
 -- 2024-01-31(nmarley): Go LSP config (added this at some point in the past 3 months)
