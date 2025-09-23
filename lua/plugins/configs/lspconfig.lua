@@ -41,6 +41,8 @@ M.capabilities.textDocument.completion.completionItem = {
   },
 }
 
+
+-- - Change `require'lspconfig'[…]` to `vim.lsp.config(…)`.
 require("lspconfig").lua_ls.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,

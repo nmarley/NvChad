@@ -3,6 +3,9 @@ local on_attach = config.on_attach
 local capabilities = config.capabilities
 
 local lspconfig = require("lspconfig")
+-- - Change `require'lspconfig'[…]` to `vim.lsp.config(…)`.
+-- local lspconfig = vim.lsp.config
+
 local util = require "lspconfig/util"
 
 -- 2024-02-11(nmarley): Rust LSP config via DreamsOfCode tutorial
