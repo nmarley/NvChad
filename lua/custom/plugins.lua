@@ -31,6 +31,21 @@ local plugins = {
     end,
   },
 
+  -- disable popups when writing in markdown
+  {
+    "hrsh7th/nvim-cmp",
+    config = function(_, opts)
+      local cmp = require "cmp"
+
+      cmp.setup(opts)
+      cmp.setup.filetype("markdown", {
+        completion = {
+          autocomplete = false,
+        },
+      })
+    end,
+  },
+
   -- {
   --   "zbirenbaum/copilot.lua",
   --   -- Lazy load when event occurs. Events are triggered
