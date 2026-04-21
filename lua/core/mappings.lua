@@ -131,7 +131,7 @@ M.lspconfig = {
 
     ["K"] = {
       function()
-        vim.lsp.buf.hover()
+        vim.lsp.buf.hover { border = "single" }
       end,
       "LSP hover",
     },
@@ -145,7 +145,7 @@ M.lspconfig = {
 
     ["<leader>ls"] = {
       function()
-        vim.lsp.buf.signature_help()
+        vim.lsp.buf.signature_help { border = "single" }
       end,
       "LSP signature help",
     },
